@@ -1,4 +1,4 @@
-class ArtistsController <ApplicationController 
+class ArtistsController < ApplicationController 
    
     get "/artists" do
       Artist.all.to_json
