@@ -43,6 +43,11 @@ Song.create(title: "Seeds", duration: "7:30", artist_id: rubie.id)
 Song.create(title: "Models", duration: "4:02", artist_id: rubie.id)
 
 
-# Seed your database here
+
+
+# Seeding playlists
+Playlist.create(playlist_name: "My Playlist", visits: 50000, image_url: "https://ibb.co/Qkm6nnh" )
+Playlist.create(playlist_name: "My Favorites",  visits: 80000, image_url: "https://ibb.co/Qkm6nnh")
+
 
 puts "✅ Done seeding!"
