@@ -1,9 +1,9 @@
 class SongsController < ApplicationController
 
 
-    
+
     get "/songs" do
-        Song.all.to_json
+        Song.all.to_json(include: :artist)
       end
     
       post "/post_song" do
