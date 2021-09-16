@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2021_09_15_154740) do
 
+  create_table "artist", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
@@ -27,8 +31,11 @@ ActiveRecord::Schema.define(version: 2021_09_15_154740) do
     t.string "title"
     t.string "duration"
     t.integer "artist_id"
+    t.integer "playlist_id"
     t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["playlist_id"], name: "index_songs_on_playlist_id"
   end
 
   add_foreign_key "songs", "artists"
+  add_foreign_key "songs", "playlists"
 end
